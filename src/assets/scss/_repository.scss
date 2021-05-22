@@ -1,0 +1,214 @@
+.repository {
+    &__search--form {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $github-grey;
+
+        .input-container {
+            width: 97%;
+            input {
+                width: inherit;
+                padding: 5px 12px;
+                font-size: 14px;
+                line-height: 20px;
+                border: 1px solid $github-grey;
+                border-radius: 6px;
+                outline: none;
+            }
+        }
+    }
+
+    &__search--result {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $github-grey;
+    }
+
+    #user-repositories {
+        .repositories {
+            padding-left: 0;
+            &__list {
+                border-bottom: 1px solid $github-grey;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                display: grid;
+                grid-template-columns: 70% 30%;
+                align-items: center;
+
+                &--details {
+                    .repositories__list--content {
+                        .repositories-title {
+                            font-size: 20px;
+                            color: $github-blue;
+
+                            .repositories-title-link {
+                                color: $github-blue !important;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .repositories-sub {
+                            width: 150px !important;
+
+                            .repositories-sub-title {
+                                padding-right: 24px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                        
+                    }
+                    .repo-info {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 8px;
+
+                        .repo__color-language-container {
+                            margin-right: 8px;
+                            display: flex;
+                            align-items: center;
+
+                            .repo__color-language {
+                                display: inline-block;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                    a {
+                        color: $github-blue;
+                        margin-right: 8px;
+                        svg {
+                            vertical-align: sub;
+                            fill: $github-inactive-grey;
+                        }
+                        .figure {
+                            color: $github-dark-grey;
+                            vertical-align: text-bottom;
+                        }
+                    }
+                    span {
+                        margin-right: 8px;
+                        font-size: 12px;
+                    }
+                }
+                &--star-box {
+                    margin-left: 22px;
+                    justify-self: end;
+                    .star-box {
+                        background: $github-btn-light;
+                        padding: 3px 12px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        border-radius: 6px;
+                        border: 1px solid $github-transparent-grey;
+                        cursor: pointer;
+                        text-align: right;
+
+                        &:hover {
+                            filter: contrast(90%);
+                        }
+
+                        svg {
+                            vertical-align: text-bottom;
+                            margin-right: 2px;
+                            fill: $github-inactive-grey;
+                        }
+
+                        .star-box-content {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 998px) {
+    .repository {
+    
+        #user-repositories {
+            .repositories {
+                &__list {
+    
+                    &--details {
+                        .repositories__list--content {
+                            margin-right: 5px;
+                            .repositories-title {
+                                font-size: 20px !important;
+    
+                                .repositories-title-link {
+                                    color: $github-blue;
+    
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+    
+                            .repositories-sub {
+                                width: 460px !important;
+
+                                .repositories-sub-title {
+                                    padding-right: 24px;
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                        .repo-info {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 8px;
+    
+                            .repo__color-language-container {
+                                margin-right: 16px;
+                                display: flex;
+                                align-items: center;
+    
+                                .repo__color-language {
+                                    display: inline-block;
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+
+                                    margin-right: 4px;
+                                }
+                            }
+                        }
+                        a {
+                            margin-right: 16px;
+                            color: $github-blue !important;
+                            svg {
+                                vertical-align: sub;
+                                fill: $github-inactive-grey;
+                                margin-right: 2px;
+                            }
+                            .figure {
+                                color: $github-dark-grey;
+                                vertical-align: text-bottom;
+                                
+                            }
+                        }
+                        span {
+                            margin-right: 16px;
+                            font-size: 12px;
+                        }
+                    }
+                    &--star-box {
+                        .star-box {  
+                            padding: 3px 12px;
+                            svg {
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.profile {
+    top: 0;
+    position: absolute;
+    padding-right: 20px;
+
+    .profile-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        height: 53px;
+        border-radius: 50%;
+        top: -25px;
+        vertical-align: middle;
+        text-align: center; 
+        margin-right: 15px;
+        object-fit: contain;
+    }
+
+    &__name {
+        margin-top: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &--full {
+            font-size: 26px;
+            line-height: 1.25;
+            letter-spacing: 0.4px;
+        }
+
+        &--username {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            color: $github-secondary;
+        }
+    }
+}
+
+@media (min-width: 998px) {
+    .profile {
+        position: relative;
+        padding-right: 20px;
+
+        &__img {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            top: -25px;
+            vertical-align: middle;
+            text-align: center;
+            
+        }
+
+        &__name {
+            margin-top: 235px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+
+            &--full {
+                font-size: 26px;
+                line-height: 1.25;
+                letter-spacing: 0.4px;
+            }
+
+            &--username {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                color: $github-secondary;
+            }
+        }
+    }
+}
